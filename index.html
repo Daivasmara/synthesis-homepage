@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<!--[if IE 8 ]><html class="no-js oldie ie8" lang="en"> <![endif]-->
+<!--[if IE 9 ]><html class="no-js oldie ie9" lang="en"> <![endif]-->
+<!--[if (gte IE 9)|!(IE)]><!--><html class="no-js" lang="en"> <!--<![endif]-->
+<head>
+  <title>Synthesis</title>
+  <meta charset="utf-8">
+  <meta name="description" content="Synthesis - Integrated Digital Communication Services">  
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <link rel="stylesheet" href="css/base.css">  
+  <link rel="stylesheet" href="css/main.css">
+  <link rel="stylesheet" href="css/vendor.css">
+  <script src="js/modernizr.js"></script>
+  <link rel="icon" type="image/png" href="favicon.png">
+</head>
+
+<body id="top">
+  <header>
+    <div class="row">
+      <div class="logo">
+        <a href="index.html">Synthesis</a>
+      </div> 
+
+      <div class="social-links">
+        <ul>
+          <li><a href="mailto:salwa@synthesis-id.com"><i class="fa fa-envelope"></i></a></li>				     			
+          <li><a href="https://synthesis-id.com"><i class="fa fa-globe"></i></a></li>				     			
+        </ul>
+      </div>
+    </div> 
+
+  </header>
+  <section id="home" class="home-particles">
+    <div class="shadow-overlay"></div>
+    <div class="content-wrap-table">		   
+      <div class="main-content-tablecell">
+        <div class="row">
+          <div class="col-twelve">
+            <div id="counter">
+              <div class="half">
+                <span id="days">334 <sup>days</sup></span> 
+                <span id="hours">23 <sup>hours</sup></span>
+              </div>
+              <div class="half">
+                <span id="mins">50 <sup>mins</sup></span>
+                <span id="secs">33 <sup>secs</sup></span>
+              </div> 
+            </div>
+            <div class="bottom-text">
+              <h1>
+                Synthesis - Integrated Digital Communication Services
+              </h1>
+              <p>
+                Our website is coming soon!
+                <br>
+                For more information: <a href="mailto:salwa@synthesis-id.com">salwa@synthesis-id.com</a>
+              </p>			  				
+            </div>			  						  			   			
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <div id="preloader"> 
+    <div id="loader"></div>
+  </div> 
+  <script src="js/jquery-2.1.3.min.js"></script>
+  <script src="js/plugins.js"></script>
+  <script src="js/main.js"></script>
+  <script>
+    const countDownDate = new Date("Dec 31, 2020 00:00:00").getTime();
+    const myInterval = setInterval(() => {
+      const now = new Date().getTime();
+      const timeleft = countDownDate - now;
+
+      const days = Math.floor(timeleft / (1000 * 60 * 60 * 24));
+      const hours = Math.floor((timeleft % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+      const minutes = Math.floor((timeleft % (1000 * 60 * 60)) / (1000 * 60));
+      const seconds = Math.floor((timeleft % (1000 * 60)) / 1000);
+
+      const daysElement = document.querySelector('#days');
+      const hoursElement = document.querySelector('#hours');
+      const minsElement = document.querySelector('#mins');
+      const secsElement = document.querySelector('#secs');
+
+      daysElement.firstChild.textContent = `${days} `;
+      hoursElement.firstChild.textContent = `${hours} `;
+      minsElement.firstChild.textContent = `${minutes} `;
+      secsElement.firstChild.textContent = `${seconds} `;
+
+      if (timeleft < 0) {
+        clearInterval(myInterval);
+        daysElement.firstChild.textContent = `0 `;
+        hoursElement.firstChild.textContent = `0 `;
+        minsElement.firstChild.textContent = `0 `;
+        secsElement.firstChild.textContent = `0 `;
+      }
+    }, 1000);
+  </script>
+</body>
+</html>

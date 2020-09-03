@@ -81,10 +81,10 @@
       const minsElement = document.querySelector('#mins');
       const secsElement = document.querySelector('#secs');
 
-      daysElement.firstChild.textContent = `${days} `;
-      hoursElement.firstChild.textContent = `${hours} `;
-      minsElement.firstChild.textContent = `${minutes} `;
-      secsElement.firstChild.textContent = `${seconds} `;
+      daysElement.firstChild.textContent = `${days.toString().length > 1 ? days : `0${days}`} `;
+      hoursElement.firstChild.textContent = `${hours.toString().length > 1 ? hours : `0${hours}`} `;
+      minsElement.firstChild.textContent = `${minutes.toString().length > 1 ? minutes : `0${minutes}`} `;
+      secsElement.firstChild.textContent = `${seconds.toString().length > 1 ? seconds : `0${seconds}`} `;
 
       if (timeleft < 0) {
         clearInterval(myInterval);
